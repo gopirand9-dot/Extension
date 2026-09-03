@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Fruit Flux",
+  "version": "0.1.0",
+  "description": "A playful animated status screen for a fruit-doubling demo.",
+  "action": {
+    "default_title": "Fruit Flux",
+    "default_popup": "popup.html"
+  }
+}
