@@ -9,10 +9,7 @@ const statusText = document.querySelector("#status-text");
 const statusDetail = document.querySelector("#status-detail");
 const progressBar = document.querySelector("#progress-bar");
 const progressValue = document.querySelector("#progress-value");
-const startButton = document.querySelector("#start-button");
-const startButtonLabel = document.querySelector("#start-button-label");
 let currentStage = 0;
-let demoTimer;
 
 function showStage(index) {
   const stage = stages[index];
@@ -26,27 +23,7 @@ function showStage(index) {
 }
 
 showStage(currentStage);
-
-function startDemo() {
-  if (demoTimer) return;
-
-  startButton.disabled = true;
-  startButtonLabel.textContent = "Demo running";
-  demoTimer = setInterval(() => {
-    currentStage += 1;
-    showStage(currentStage);
-
-    if (currentStage === stages.length - 1) {
-      clearInterval(demoTimer);
-      demoTimer = undefined;
-      startButton.disabled = false;
-      startButtonLabel.textContent = "Run again";
-    }
-  }, 2600);
-}
-
-startButton.addEventListener("click", () => {
-  currentStage = 0;
+setInterval(() => {
+  currentStage = (currentStage + 1) % stages.length;
   showStage(currentStage);
-  startDemo();
-});
+}, 2600);
