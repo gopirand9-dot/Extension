@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Flux</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-labelledby="app-title">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+
+      <header class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>F</span></div>
+        <div>
+          <p class="eyebrow">FRUIT FLUX</p>
+          <h1 id="app-title">Fruit multiplier</h1>
+        </div>
+        <span class="demo-tag">DEMO</span>
+      </header>
+
+      <section class="status-card" aria-live="polite">
+        <div class="orbit" aria-hidden="true">
+          <span class="orb orb-a"></span><span class="orb orb-b"></span><span class="orb orb-c"></span>
+          <div class="fruit fruit-main"><span class="leaf"></span><span class="shine"></span></div>
+        </div>
+        <div class="status-copy">
+          <p class="stage-label">CURRENT TASK</p>
+          <h2 id="status-text">Logging into Roblox</h2>
+          <p id="status-detail">Preparing a secure demo session...</p>
+        </div>
+        <div class="progress-track" aria-label="Task progress"><span id="progress-bar"></span></div>
+        <div class="progress-meta"><span id="progress-value">18%</span><span>PLEASE WAIT</span></div>
+      </section>
+
+      <section class="queue" aria-label="Task queue">
+        <div class="queue-heading"><span>UP NEXT</span><span class="queue-count">01</span></div>
+        <div class="queue-item">
+          <div class="fruit fruit-small" aria-hidden="true"><span class="leaf"></span></div>
+          <div><strong>Doubling Fruits</strong><p>Ready to begin</p></div>
+          <span class="pulse-dot" aria-label="Queued"></span>
+        </div>
+      </section>
+
+      <p class="notice"><span>✦</span> Visual demo only — no account or game changes are made.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
